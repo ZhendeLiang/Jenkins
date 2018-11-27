@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TimeController {
 	
 	@RequestMapping(value="/now")
-	public String now(@PathVariable int size) {
+	public String now(@PathVariable String size) {
 		SimpleDateFormat simple = new SimpleDateFormat("HH:mm:ss");
 		System.out.println(simple.format(new Date()));
 		return "now is :"+simple.format(new Date());
